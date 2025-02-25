@@ -28,22 +28,26 @@ def null_g(g):
 
 #Plotting nuclides with r as x-axis and g as y-axis
 
-Nr = np.linspace(-5,5,500)
+Nr = np.linspace(0,2,500)
 Ng = []
 index = 0
 for count in Nr:
     Ng.append(null_r(Nr[index]))
     index = index + 1
 
-plt.plot(Nr,Ng,'r')
+plt.plot(Nr,Ng,'r',label="R dot Nullcline")
 
-Nr = np.linspace(-5,5,500)
+Nr = np.linspace(0,2,500)
 Ng = []
 index = 0
 for count in Nr:
     Ng.append(null_g(Nr[index]))
     index = index + 1
 
-plt.plot(Nr,Ng,'b')
+plt.plot(Nr,Ng,'b',label="G dot Nullcline")
 
+plt.plot(0.5,0.5,'gX',label="Equilibrium Points")
+plt.plot(0,0,'gX')
+
+plt.legend()
 plt.savefig("./Nullclines.png")
