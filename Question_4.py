@@ -36,22 +36,22 @@ for count in Nr:
     index = index + 1
 
 plt.plot(Nr,Ng,'r',label="R dot Nullcline")
-plt.axhline(0,0,1,color="r")
+plt.axvline(0,0,1,color="r")
 
-Nr = np.linspace(-2,2,500)
-Ng = []
+Ng = np.linspace(-2,2,500)
+Nr = []
 index = 0
-for count in Nr:
-    Ng.append(null_g(Nr[index]))
+for count in Ng:
+    Nr.append(null_g(Ng[index]))
     index = index + 1
 
 plt.plot(Nr,Ng,'b',label="G dot Nullcline")
-plt.axvline(0,0,1,color="b")
+plt.axhline(0,0,1,color="b")
 
 plt.plot(0.5,0.5,'gX',label="Equilibrium Points")
 plt.plot(0,0,'gX')
-plt.plot(2/3,0,'gX')
-plt.plot(0,1,'gX')
+plt.plot(0,2/3,'gX')
+plt.plot(1,0,'gX')
 
 plt.legend()
 plt.savefig("./Nullclines.png")
