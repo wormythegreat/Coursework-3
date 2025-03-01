@@ -53,5 +53,11 @@ plt.plot(0,0,'gX')
 plt.plot(0,2/3,'gX')
 plt.plot(1,0,'gX')
 
+#SOLUTIONS
+#(0,0)
+#(1/2,1/2)
+#(0,2/3)
+#(1,0)
+
 plt.legend()
 plt.savefig("./Nullclines.png")
