@@ -17,11 +17,13 @@ def plot_line(start_r,start_g):
     t_total = [0]
     r = [start_r]   #make this the saddle point its self
     g = [start_g]
+    j = 0
 
-    for j in range(nstep):
+    while (abs(r[-1]) < 5) and (abs(g[-1] < 5)):
         r.append(r[j] + (t * rdot(r[j],g[j])))
         g.append(g[j] + (t * gdot(r[j],g[j])))
         t_total.append(float(t_total[j] + t))
+        j = j + 1
 
     plt.plot(r,g,'orange')
 
