@@ -27,6 +27,9 @@ for j in range(nstep):
     t_total.append(float(t_total[j] + t))
 
 plt.plot(r,g,'orange',label = "t = 0.1")
+print("R:",r[-1])
+print("G:",g[-1])
+print("t:",t_total[-1])
 
 max = 6
 t = 0.00548
