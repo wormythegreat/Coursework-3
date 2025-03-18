@@ -35,18 +35,6 @@ def plot_line(start_r,start_g,colour,time,tag):
     else:
         plt.plot(r,g,colour, label=tag)
 
-""" #saddle point (2,1)
-h = 0.001
-lines = 30
-angles = np.linspace(0,2*pi,lines)
-for a in angles:
-    x = 2 + (h * cos(a))
-    y = 1 + (h * sin(a))
-    plot_line(x,y)
-    
-plt.savefig("./Unstable_Multi_Plot(Q3)") """
-
-
 
 ###################
 #PLOT OF MANIFOLDS#
